@@ -11,4 +11,11 @@ const getRandomColor = () => {
   return items[Math.floor(Math.random() * items.length)];
 };
 
-export { getRandomColor };
+const setId = (list) => {
+  return list.map((element, index) => {
+    element.id = index + 1;
+    return element;
+  });
+};
+
+export { getRandomColor,setId };

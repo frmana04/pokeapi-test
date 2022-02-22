@@ -6,7 +6,7 @@ const getInfoPokemon = async (url) => {
     const { data } = await axios.get(url);
 
    console.log(data);
- //  return data.results;
+ return data ;
   } catch (err) {
     console.log(err);
   }
