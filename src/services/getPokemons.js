@@ -1,5 +1,5 @@
 import axios from "axios";
-import { setId } from "helpers/helpers";
+import { setId, sortByName } from "helpers/helpers";
 
 const getPokemons = async () => {
   try {
@@ -7,9 +7,10 @@ const getPokemons = async () => {
     const { data } = await axios.get(
       `${process.env.REACT_APP_URL_BASE}/${process.env.REACT_APP_URL_POKEMONS}`
     );
-    const list = setId(data.results)
-   console.log(list);
-   return list;
+    const list = setId(data.results);
+    const sortedList = sortByName(list);
+   console.log("sorted:",sortedList);
+   return sortedList;
   } catch (err) {
     console.log(err);
   }

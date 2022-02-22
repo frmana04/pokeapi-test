@@ -1,4 +1,4 @@
-const getRandomColor = () => {
+const getRandomColor = (id) => {
   const items = [
     "default",
     "primary",
@@ -8,7 +8,9 @@ const getRandomColor = () => {
     "success",
     "warning",
   ];
-  return items[Math.floor(Math.random() * items.length)];
+  console.log(id)
+  console.log(id%6)
+  return items[id%6];
 };
 
 const setId = (list) => {
@@ -18,4 +20,13 @@ const setId = (list) => {
   });
 };
 
-export { getRandomColor,setId };
+
+const sortByName = (list) => list.sort((a,b)=>a.name<b.name?-1:1)
+
+const filterByWord = (list,word) =>{
+    return list.filter(element =>
+        element.name.includes(word)
+    )
+}
+
+export { getRandomColor,setId,sortByName,filterByWord };
