@@ -1,0 +1,10 @@
+.link-to{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: blue;
+    cursor: pointer;
+    &__link{
+        text-decoration: underline;
+    }
+}

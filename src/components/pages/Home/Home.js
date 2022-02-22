@@ -1,15 +1,14 @@
 import React from "react";
 import "./Home.scss";
-import { Link } from "react-router-dom";
+import LinkTo from "components/atoms/LinkTo/LinkTo";
 
 function Home() {
   return (
     <>
+    <div className="home">
       <h1>Home</h1>
-
-      <Link  to="/list-pokemon">
-       List Pokemons
-      </Link>
+      <LinkTo url={"list-pokemon"} text={"Pokemon List"}/>
+    </div>
     </>
   );
 }
