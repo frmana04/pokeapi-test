@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Header from "./components/organisms/Header/Header";
+import { BrowserRouter as Router } from "react-router-dom";
+import createRoutes from "./routes/routes";
 
 function App() {
   return (
    <>
-   <div className='app'>
-
-   </div>
+ 
+ <>
+     <Header/>
+    
+      <Router>
+        <div className="body-routes">{createRoutes()}</div>
+      </Router>
+     
+    </>
    
    </>
   );
