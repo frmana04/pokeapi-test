@@ -8,8 +8,7 @@ const getRandomColor = (id) => {
     "success",
     "warning",
   ];
-  console.log(id)
-  console.log(id%6)
+
   return items[id%6];
 };
 

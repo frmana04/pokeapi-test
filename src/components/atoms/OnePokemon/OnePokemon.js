@@ -7,7 +7,6 @@ import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 
 
 function OnePokemon({ name, id }) {
-console.log("render");
  
   return (
     <>

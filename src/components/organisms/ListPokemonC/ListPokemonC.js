@@ -25,7 +25,6 @@ function ListPokemonC({ list }) {
       headerName: "Name",
       width: "200",
       renderCell: (params) => {
-        console.log(params.row)
         return <OnePokemon name={params.row.name} id={params.row.id} />;
       },
     },

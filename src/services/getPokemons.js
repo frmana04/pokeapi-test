@@ -9,7 +9,6 @@ const getPokemons = async () => {
     );
     const list = setId(data.results);
     const sortedList = sortByName(list);
-   console.log("sorted:",sortedList);
    return sortedList;
   } catch (err) {
     console.log(err);
