@@ -33,7 +33,7 @@ function DetailPokemon() {
 
   return (
     <>
-      
+
       <LinkTo url={"home"} text={"Home"} />
       <LinkTo url={"list-pokemon"} text={"Pokemon List"} />
       <h2 className="detail__title">Details</h2>
@@ -64,7 +64,9 @@ function DetailPokemon() {
           <p className="detail__moves-title">Moves</p>
         <div className="detail__moves-list">
           {movesList.map((move) => 
-              <Chip className="detail__moves-move" label={move.move.name} variant="outlined" onDelete={()=>handleDeleteMove(move.id)}  />
+          <div className="detail__moves-move">
+              <Chip  label={move.move.name} variant="outlined" onDelete={()=>handleDeleteMove(move.id)}  />
+          </div>
           )}
         </div> 
         </div>  
