@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./ListPokemonC.scss";
 import OnePokemon from "components/atoms/OnePokemon/OnePokemon";
 import { DataGrid } from "@mui/x-data-grid";
@@ -6,13 +6,12 @@ import { getInfoPokemon } from "services/getInfoPokemon";
 import { useNavigate } from "react-router-dom";
 import { filterByWord } from "helpers/helpers";
 function ListPokemonC({ list }) {
-
   const navigate = useNavigate();
-  const [gridList,updateGridList] = useState(list)
+  const [gridList, updateGridList] = useState(list);
 
-  const manageChangeInput = (ev) =>{
-    updateGridList(filterByWord(list,ev.target.value));
-  }
+  const manageChangeInput = (ev) => {
+    updateGridList(filterByWord(list, ev.target.value));
+  };
 
   const manageClickCell = async (cell) => {
     const info = await getInfoPokemon(cell.row.url);
@@ -37,16 +36,21 @@ function ListPokemonC({ list }) {
 
   return (
     <>
-    <div className="list-pokemonC">
-    <input className="list-pokemonC__input" placeholder="Search pokemon..." type={"text"} onChange={manageChangeInput}/>
-      <div className="list-pokemonC__grid">
-        <DataGrid
-          onCellClick={manageClickCell}
-          autoHeight={true}
-          rows={gridList}
-          columns={columns}
+      <div className="list-pokemonC">
+        <input
+          className="list-pokemonC__input"
+          placeholder="Search pokemon..."
+          type={"text"}
+          onChange={manageChangeInput}
         />
-      </div>
+        <div className="list-pokemonC__grid">
+          <DataGrid
+            onCellClick={manageClickCell}
+            autoHeight={true}
+            rows={gridList}
+            columns={columns}
+          />
+        </div>
       </div>
     </>
   );

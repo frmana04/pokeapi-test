@@ -1,0 +1,18 @@
+.moves {
+  padding: 20px;
+  &__title {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__move {
+    margin: 5px;
+  }
+}

@@ -6,7 +6,7 @@ function Loading() {
   return (
     <>
       <div className="loading">
-        <img className="loading__img" src={LoadingGif} alt={"loading"}/>
+        <img className="loading__img" src={LoadingGif} alt={"loading"} />
         <span>Loading...</span>
       </div>
     </>

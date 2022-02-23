@@ -9,7 +9,7 @@ const getRandomColor = (id) => {
     "warning",
   ];
 
-  return items[id%6];
+  return items[id % 6];
 };
 
 const setId = (list) => {
@@ -19,13 +19,10 @@ const setId = (list) => {
   });
 };
 
+const sortByName = (list) => list.sort((a, b) => (a.name < b.name ? -1 : 1));
 
-const sortByName = (list) => list.sort((a,b)=>a.name<b.name?-1:1)
+const filterByWord = (list, word) => {
+  return list.filter((element) => element.name.includes(word));
+};
 
-const filterByWord = (list,word) =>{
-    return list.filter(element =>
-        element.name.includes(word)
-    )
-}
-
-export { getRandomColor,setId,sortByName,filterByWord };
+export { getRandomColor, setId, sortByName, filterByWord };

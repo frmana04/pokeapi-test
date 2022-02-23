@@ -1,0 +1,31 @@
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: rgb(247, 240, 233);
+  padding: 10px;
+
+  &__forms {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+  }
+  &__name {
+    font-size: 1.5rem;
+    color: green;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: 800;
+  }
+  &__img {
+    width: 300px;
+    height: auto;
+  }
+  &__abilities-title {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+  }
+}

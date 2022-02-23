@@ -1,7 +1,7 @@
 import React from "react";
 import "./LinkTo.scss";
 import { Link } from "react-router-dom";
-import {Link as LinkMUI} from "@mui/icons-material";
+import { Link as LinkMUI } from "@mui/icons-material";
 
 function LinkTo({ text, url }) {
   return (

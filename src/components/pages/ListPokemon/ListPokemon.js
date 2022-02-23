@@ -26,8 +26,7 @@ function ListPokemon() {
 
       <div className="list-pokemon">
         <h2 className="list-pokemon__title">Pokemon List</h2>
-          {loading ? <Loading /> : <ListPokemonC list={list} />}
-       
+        {loading ? <Loading /> : <ListPokemonC list={list} />}
       </div>
     </>
   );

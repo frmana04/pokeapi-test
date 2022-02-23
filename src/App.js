@@ -6,18 +6,15 @@ import createRoutes from "./routes/routes";
 
 function App() {
   return (
-   <>
- 
- <>
-     <Header/>
-    
-      <Router>
-        <div className="body-routes">{createRoutes()}</div>
-      </Router>
-     
+    <>
+      <>
+        <Header />
+
+        <Router>
+          <div className="body-routes">{createRoutes()}</div>
+        </Router>
+      </>
     </>
-   
-   </>
   );
 }
 
