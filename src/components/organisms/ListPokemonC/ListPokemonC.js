@@ -14,8 +14,12 @@ function ListPokemonC({ list }) {
   };
 
   const manageClickCell = async (cell) => {
-    const info = await getInfoPokemon(cell.row.url);
-    navigate("/detail-pokemon", { state: info });
+    try {
+      const info = await getInfoPokemon(cell.row.url);
+      navigate("/detail-pokemon", { state: info });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const columns = [

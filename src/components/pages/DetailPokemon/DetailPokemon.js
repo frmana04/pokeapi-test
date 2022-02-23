@@ -11,17 +11,22 @@ function DetailPokemon() {
 
   const [dataForm, updateIsDataForm] = useState({ id: "", is_battle_only: "" });
 
-  const getForms = async () => {
-    const { id, is_battle_only } = await getPokemonForms(state.forms[0].url);
-
-    updateIsDataForm({ id, is_battle_only });
-  };
-
   useEffect(() => {
+    const getForms = async () => {
+      try {
+        const { id, is_battle_only } = await getPokemonForms(
+          state.forms[0].url
+        );
+        updateIsDataForm({ id, is_battle_only });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
     window.scrollTo(0, 0);
     state.moves = setId(state.moves);
     getForms();
-  }, []);
+  }, [state]);
 
   return (
     <>

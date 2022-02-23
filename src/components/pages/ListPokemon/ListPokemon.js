@@ -14,10 +14,14 @@ function ListPokemon() {
   }, []);
 
   const getInfo = async () => {
-    updateLoading(true);
-    const list = await getPokemons();
-    updateList(list);
-    updateLoading(false);
+    try {
+      updateLoading(true);
+      const list = await getPokemons();
+      updateList(list);
+      updateLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
